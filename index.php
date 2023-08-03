@@ -527,7 +527,7 @@ echo $template;
 .spin-dot {
     position: absolute;
     display: inline-block;
-    font-size: 20px;
+    font-size: 21px;
     width: 1em;
     height: 1em;
 }
