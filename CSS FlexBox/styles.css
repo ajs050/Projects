@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid black;
+    padding: 24px 24px 0 24px;
+}
+.row {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.box--long {
+    border: 2px solid lightgray;
+    height: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+.box {
+    width: 30%;
+    height: 100px;
+    border: 2px solid black;
+    margin-bottom: 24px;
+}
+.box--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
