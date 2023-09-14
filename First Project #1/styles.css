@@ -84,10 +84,48 @@ li {
     border: 2px solid;
     border-radius: 4px;
 }
+.btn__menu {
+    text-align: center;
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+    color: #7342d6;
+}
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: white;
+    padding: 8px;
+}
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu__list {
+    padding: 32px 0;
+}
+.menu__link {
+    color: white;
+    font-size: 40px;
+}
+/* HEADER */
 #landing {
     background-color: rgba(115, 66, 214, 0.1);
 }
-/* HEADER */
 header {
     height: calc(100vh - 80px);
 }
