@@ -12,6 +12,9 @@ html {
 a {
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline;
+}
 img {
     width: 100%;
 }
@@ -38,6 +41,9 @@ button:active {
 body {
     max-width: 100vw;
     overflow-x: hidden;
+}
+.no-cursor {
+    cursor: not-allowed;
 }
 /* NAV */
 nav {
@@ -193,6 +199,7 @@ h2 {
 }
 .books {
     display: flex;
+    flex-wrap: wrap;
 }
 .book {
     width: 25%;
@@ -225,4 +232,37 @@ h2 {
     text-decoration: line-through;
     padding-right: 6px;
     opacity: 0.4;
+}
+/* Explore */
+#explore {
+    background-color: rgba(115, 66, 214, 0.1);
+}
+.explore__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background-color: #242424;
+}
+.footer__logo {
+    display: flex;
+}
+.footer__logo--img {
+    width: 160px;
+    filter: grayscale(1) invert(1);
+}
+.footer__link,
+.footer__copyright {
+    color: #fff;
+}
+.footer__list {
+    margin: 20px 0 24px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.footer__link {
+    padding: 0 8px;
 }
