@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="apps.js"></script>
   </head>
   <body>
     <section id="landing">
@@ -20,19 +21,26 @@
             <li><a href="#" class="nav__link">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
           </ul>
-        </div>
-        <button class="btn__menu">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="menu__backdrop">
-          <button class="btn__menu btn__menu--close">
-            <i class="fas fa-times"></i>
+
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
           </button>
-          <ul class="menu__links">
-            <li class="menu__list"><a href="#" class="menu__link">Home</a></li>
-            <li class="menu__list"><a href="#features" class="menu__link">Books</a></li>
-            <li class="menu__list"><a href="#" class="menu__link no-cursor">Contact</a></li>
-          </ul>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#features" class="menu__link" onclick="closeMenu()">Books</a>
+              </li>
+              <li class="menu__list">
+                <a href="#" class="menu__link no-cursor">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <header>
@@ -42,7 +50,9 @@
             <h2>
               Find your dream book with <span class="purple">Library</span>
             </h2>
-            <button class="btn">Browse Books</button>
+            <a href="#features">
+              <button class="btn">Browse Books</button>
+            </a>
           </div>
           <figure class="header__img--wrapper">
             <img class="header__img" src="./assets/Undraw_Books.svg" alt="" />
@@ -159,11 +169,7 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/deep work.jpeg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/deep work.jpeg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">Deep Work</div>
                 <div class="book__ratings">
@@ -185,15 +191,13 @@
       <section id="recent">
         <div class="container">
           <div class="row">
-            <h2 class="section__title">Latest <span class="purple">Books</span></h2>
+            <h2 class="section__title">
+              Latest <span class="purple">Books</span>
+            </h2>
             <div class="books__latest books">
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/book-1.jpeg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/book-1.jpeg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">The 10X Rule</div>
                 <div class="book__ratings">
@@ -209,11 +213,7 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/book-2.jpeg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/book-2.jpeg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">Be Obsessed Or Be Average</div>
                 <div class="book__ratings">
@@ -229,11 +229,7 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/book-4.jpeg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/book-4.jpeg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">Cashflow Quadrant</div>
                 <div class="book__ratings">
@@ -249,11 +245,7 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/book-3.jpeg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/book-3.jpeg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">Rich Dad Poor Dad</div>
                 <div class="book__ratings">
@@ -269,11 +261,7 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/book-5.jpeg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/book-5.jpeg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">48 Laws of Power</div>
                 <div class="book__ratings">
@@ -289,11 +277,7 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/book-6.jpeg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/book-6.jpeg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">The 5 Second Rule</div>
                 <div class="book__ratings">
@@ -309,11 +293,7 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/book-7.jpg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/book-7.jpg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">Your Next Five Moves</div>
                 <div class="book__ratings">
@@ -329,11 +309,7 @@
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
-                  <img
-                    src="assets/book-8.jpeg"
-                    class="book__img"
-                    alt=""
-                  />
+                  <img src="assets/book-8.jpeg" class="book__img" alt="" />
                 </figure>
                 <div class="book__title">Mastery</div>
                 <div class="book__ratings">
@@ -353,8 +329,10 @@
       </section>
       <section id="explore">
         <div class="container">
-          <div class=" explore__row row">
-            <h2 class="section__title">Explore more <span class="purple">Books</span></h2>
+          <div class="explore__row row">
+            <h2 class="section__title">
+              Explore more <span class="purple">Books</span>
+            </h2>
             <a href="#features"><button class="btn">Explore books</button></a>
           </div>
         </div>
@@ -363,9 +341,14 @@
     <footer>
       <div class="container">
         <div class="row explore__row">
-          <a href="#"> <figure class="footer__logo">
-            <img src="./assets/Library.svg" class="footer__logo--img" alt="">
-          </figure></a>
+          <a href="#">
+            <figure class="footer__logo">
+              <img
+                src="./assets/Library.svg"
+                class="footer__logo--img"
+                alt=""
+              /></figure
+          ></a>
           <div class="footer__list">
             <a href="" class="footer__link no-cursor">Home</a>
             <a href="" class="footer__link no-cursor">About</a>
