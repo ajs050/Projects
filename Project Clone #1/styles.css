@@ -54,9 +54,13 @@ nav {
     color: #fff;
 }
 .logo__name {
-    font-size: 24px;
+    font-size: 28px;
     padding: 0 8px;
     font-weight: 700;
+    transition: all 300ms ease;
+}
+.logo__name:hover {
+    color: #6415FF;
 }
 .nav__links {
     display: flex; 
@@ -67,7 +71,26 @@ nav {
 .nav__link {
     color: #243E63;
     font-weight: 500;
-    padding: 0 8px;
+    position: relative;
+    transition: all 400ms ease;
+}
+.nav__effect::after {
+    content: "";
+    position: absolute;
+    background-color: #6415FF;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+.nav__effect:hover::after {
+    opacity: 1;
+}
+.nav__link:hover {
+    color: #6415FF;
 }
 .nav__user {
     padding-left: 8px;
@@ -134,8 +157,15 @@ input {
     height: 70px;
     border-radius: 50px;
     padding: 0 8px;
-    opacity: 0.3;
     font-size: 18px;
+    transition: all 300ms ease;
+    border: 2px solid #24242423;
+}
+input:hover {
+    border-color: #243E63;
+}
+input::placeholder{
+    opacity: 0.6;
 }
 .header__btn {
     position: absolute;
@@ -144,4 +174,8 @@ input {
     right: 0;
     border-radius: 50px;
     padding: 18px 32px;
+    transition: all 300ms ease;
+}
+.header__btn:hover {
+    background-color: #25095d;
 }
