@@ -20,6 +20,10 @@ html {
 a {
     text-decoration: none;
 }
+p {
+    font-size: 20px;
+    color: #7C8BA1;
+}
 img {
     width: 100%;
 }
@@ -34,6 +38,7 @@ button {
 }
 p {
     line-height: 1.5;
+    text-align: left;
 }
 .flex {
     flex: 1;
@@ -109,7 +114,6 @@ header {
     height: calc(100vh - 100px);
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .header__row {
     display: flex;
@@ -122,7 +126,6 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     height: 550px;
-    padding: 8px 0;
 }
 .header__img--wrapper {
     display: flex;
@@ -130,14 +133,12 @@ header {
 }
 .header__info--end-img {
     max-width: 350px;
-    display: flex;
 }
-.header__title,
-.header__para {
+.header__title {
     text-align: left;
 }
 .header__para {
-    font-size: 20px;
+    color: #242424;
 }
 .header__title {
     font-size: 48px;
@@ -178,4 +179,83 @@ input::placeholder{
 }
 .header__btn:hover {
     background-color: #25095d;
+}
+
+/* features */
+.section__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+}
+.section__title {
+    color: #6415FF;
+}
+.section__sub-title {
+    font-size: 56px;
+    margin: 16px 0;
+    font-weight: 500;
+}
+.section__para {
+    text-align: center;
+    color: #7C8BA1;
+}
+.pros {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 80%;
+}
+.pro {
+    width: calc(100% / 3);
+    display: flex;
+    padding: 24px;
+}
+.pro__para {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.feature__img {
+    max-width: 25px;
+}
+.feature__img--wrapper {
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(128, 128, 128, 0.288);
+    height: 70px;
+    width: 180px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.pro__wrapper {
+    margin-left: 12px;
+}
+
+/* quality  */
+#quality {
+    height: 80vh;
+}
+.quality__para {
+    text-align: left;
+    margin-bottom: 24px;
+}
+.quality__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+}
+.quality__img--wrapper {
+    display: flex;
+    max-width: 50%;
+}
+.quality__info {
+    width: 50%;
+    padding: 12px;
+}
+.quality__btn {
+    margin-left: 0;
 }
