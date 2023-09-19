@@ -43,6 +43,24 @@ p {
 .flex {
   flex: 1;
 }
+.nav__effect::after {
+  content: "";
+  position: absolute;
+  background-color: #6415ff;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 400ms ease;
+}
+.nav__effect--white::after {
+  background-color: white;
+}
+.nav__effect:hover::after {
+  opacity: 1;
+}
 /* NAV */
 nav {
   height: 100px;
@@ -78,21 +96,6 @@ nav {
   font-weight: 500;
   position: relative;
   transition: all 400ms ease;
-}
-.nav__effect::after {
-  content: "";
-  position: absolute;
-  background-color: #6415ff;
-  width: 100%;
-  height: 2px;
-  bottom: -3px;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: all 300ms ease;
-}
-.nav__effect:hover::after {
-  opacity: 1;
 }
 .nav__link:hover {
   color: #6415ff;
@@ -237,12 +240,7 @@ input::placeholder {
 }
 
 /* quality  */
-#quality,
-#steps__section,
-#values,
-#pricing {
-  height: 80vh;
-}
+
 .quality__para {
   text-align: left;
   margin-bottom: 24px;
@@ -329,9 +327,7 @@ input::placeholder {
 }
 
 /* PRICING */
-#pricing {
-  height: 120vh;
-}
+
 .row__pricing {
   max-width: 1400px;
 }
@@ -434,7 +430,10 @@ ul {
 }
 /* Ending  */
 #ending {
-    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .row__ending {
   width: 100%;
@@ -473,4 +472,74 @@ ul {
     width: 40%;
     font-size: 28px;
     font-weight: 500;
+}
+.container__ending {
+  padding: 56px;
+}
+/* Footer  */ 
+footer {
+  background-color: #6415ff;
+}
+.footer__row {
+  padding: 0 24px;
+}
+.footer__list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start
+}
+.footer__links, .footer__title {
+ color: white;
+}
+.footer__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.footer__links {
+  margin: 8px 0;
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+}
+.footer__line {
+  border-top: 3px;
+  margin: 50px 0;
+  width: 100%;
+  opacity: 0.6;
+}
+.footer__btn {
+  background-color: #fff;
+  color: #6415ff;
+}
+.footer__name, .footer__copyright {
+ color: #fff;
+}
+.footer__name:hover {
+  color: #fff;
+}
+.footer__end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__icons {
+  padding: 0 8px;
+}
+.footer__icon {
+  margin-left: 12px;
+  font-size: 18px;
+  color: black;
+  padding: 12px;
+  border-radius: 50px;
+  background-color: white;
+  transition: all 300ms ease;
+}
+.footer__icon:hover {
+  background-color: #ffffffb2;
 }
