@@ -1,16 +1,16 @@
 // Question 1
-function showRating(rating) {
-  let ratings = "";
-  for (i = 0; i < Math.floor(rating); i++) {
-    ratings += "★";
-    if (i !== Math.floor(rating - 1)) {
-      ratings += " ";
+function showRating(ratings) {
+  rating = "";
+  for (i = 0; i < Math.floor(ratings); i++) {
+    rating += "★";
+    if (i !== Math.floor(ratings) - 1) {
+      rating += " ";
     }
   }
-  if (!Number.isInteger(rating)) {
-    ratings += " .";
+  if (!Number.isInteger(ratings)) {
+    rating += " .";
   }
-  return ratings;
+  return rating;
 }
 console.log(showRating(3.5));
 
@@ -18,36 +18,36 @@ console.log(showRating(3.5));
 function sortLowToHigh(arr) {
   return arr.sort((a, b) => a - b);
 }
-console.log(sortLowToHigh([5, 200, 10, 0, -5]));
+console.log(sortLowToHigh([20, 10, 50, 100, 8]));
 
 // Question 3
-function HightToLow(objects) {
-    return objects.sort((a, b) => b.price - a.price)
+function HighestToLowest(arr) {
+    return arr.sort((a, b) => b.price - a.price)
 }
 console.log(
-  HightToLow([
-    { id: 1, price: 50 },
-    { id: 2, price: 0 },
-    { id: 3, price: 500 },
+  HighestToLowest([
+    { id: 1, price: 25 },
+    { id: 2, price: 10 },
+    { id: 3, price: 70 },
   ])
 );
-// Question 5
 
-async function callId(id) {
+// Question 4
+async function postsByUser(userId) {
+    // "https://jsonplaceholder.typicode.com/posts"
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const data = await response.json()
-    const posts = data.filter((elem) => elem.userId === id)
-    console.log(posts)
-}   
-callId(4)
-
-// Question 6
-async function firstSixIncomplete(userId) {
-    const response = await fetch("https://jsonplaceholder.typicode.com/todos")
     const data = await response.json();
-    const completed = data.filter((elem) => !elem.completed).slice(0, 6)
-    console.log(completed)
+    const posts = data.filter((elem) => elem.userId === userId)
+    return console.log(posts)
 }
-firstSixIncomplete()
+(postsByUser(4))
 
-
+// Question 5
+async function postBySingleUser(completed) {
+// "https://jsonplaceholder.typicode.com/posts"
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos")
+    const data = await response.json() 
+    const posts = data.filter((elem) => !elem.completed).slice(0, 6)
+    console.log(posts)
+}
+postBySingleUser()
